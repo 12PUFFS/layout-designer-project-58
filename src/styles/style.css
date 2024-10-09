@@ -1,7 +1,108 @@
 /** CSS STYLE **/
+@font-face {
+  font-family: Neucha;
+  src: url("/src/fonts/Neucha-Regular.ttf");
+}
 
-.hello {
-  display: block;
+@font-face {
+  font-family: "Open-Sans";
+  src: url("/src/fonts/OpenSans-Regular.ttf");
+}
+:root {
+  --white: #fff;
+  --translucent-white: #d7ccc0;
+  --light: #f5f4f0;
+  --main: #fe8a02;
+  --basic-dark: #42413c;
+  --dark: #2a2626;
+  --translucent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+}
 
-  color: #fff;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--dark);
+  font-family: "Open-Sans";
+}
+h1,
+h2,
+h3,
+h4,
+h6,
+h6 {
+  font-family: Neucha;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+  padding: 100px 0;
+  position: relative; /* Позиционирование для текста */
+  z-index: 1;
+}
+
+.background-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/src/images/background.png"); /* Замените на путь к вашей картинке */
+  background-size: cover; /* Обтягивает картинку, чтобы она заполнила контейнер */
+  background-repeat: no-repeat;
+  opacity: 0.1; /* Прозрачность 90% (1 - 0.9) */
+  z-index: 0; /* Позволяет фону оставаться за текстом */
+}
+.header-hero {
+  position: relative;
+}
+
+.header {
+}
+
+.header-main {
+  position: absolute;
+  height: 525px;
+  top: -55px;
+  right: -270px;
+  z-index: -1;
+}
+
+span {
+  color: #fe8a02;
+}
+
+.hro-desc {
+  margin-top: 180px;
+  display: flex;
+  column-gap: 30px;
+}
+
+.hro-link {
+  padding: 12px 24px;
+  font-weight: bold;
 }
