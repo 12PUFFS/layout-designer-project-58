@@ -8,6 +8,16 @@
   font-family: "Open-Sans";
   src: url("/src/fonts/OpenSans-Regular.ttf");
 }
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: var(--basic-dark);
+}
 :root {
   --white: #fff;
   --translucent-white: #d7ccc0;
@@ -56,14 +66,19 @@ h3 {
   width: 1110px;
   margin: 0 auto;
   padding: 100px 0;
-  display: flex;
-  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
   position: relative;
-
+  background: var(--light);
   overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
 }
 
 span {
@@ -71,16 +86,17 @@ span {
 }
 
 .section-bg::before {
-  width: 1440px;
-  height: 914px;
+  width: 1340px;
+  height: 916px;
   content: "";
   position: absolute;
   background-image: url(/src/images/background.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.2;
+  opacity: 6%;
   z-index: 0;
 }
 
@@ -91,7 +107,7 @@ span {
 .header-hero h1 {
   z-index: 2;
   position: relative;
-  margin-bottom: 180px;
+  margin-bottom: 192px;
 }
 
 .hro-desc {
@@ -120,28 +136,86 @@ span {
 
 .hro-link {
   text-align: center;
-  width: 148px;
+
   margin-top: 40px;
   text-decoration: none;
   padding: 12px 24px;
   background: var(--main);
   font-weight: bold;
   color: var(--white);
-  display: block;
+  display: inline-block;
 }
 
 .section-heading {
   text-align: center;
-  margin-bottom: 30px;
   position: relative;
 }
 
+.section-heading-p {
+  margin: 0;
+  padding: 0;
+}
+
 .preview {
-  left: -25%;
+  left: 10%;
   top: 200px;
   position: absolute;
   width: 919px;
   height: 517px;
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
   z-index: 4;
+}
+
+.line {
+  top: 370px;
+  position: relative;
+  background: var(--basic-dark);
+  height: 100px;
+}
+
+.section-main {
+  margin-top: 370px;
+  background: var(--basic-dark);
+  height: 891px;
+
+  padding-top: 100px;
+}
+
+.blocks {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+}
+
+.block {
+  box-sizing: border-box;
+  width: 350px;
+  height: 348px;
+  background: var(--light);
+}
+
+.block-no-bg {
+  width: 350px;
+  height: 348px;
+  background: var(--basic-dark);
+}
+
+.block-no-bg {
+  color: var(--white);
+}
+
+.block-no-bg h3 {
+  font-size: 52px;
+}
+
+.block-desc {
+  padding: 24px;
+  text-decoration: none;
+}
+
+.block-number {
+  font-size: 64px;
+  padding-bottom: 40px;
+  font-family: "Neucha";
+  line-height: 1;
 }
