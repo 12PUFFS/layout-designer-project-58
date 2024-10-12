@@ -1,6 +1,6 @@
 /** CSS STYLE **/
 @font-face {
-  font-family: Neucha;
+  font-family: "Neucha";
   src: url("/src/fonts/Neucha-Regular.ttf");
 }
 
@@ -28,13 +28,14 @@ body {
   color: var(--dark);
   font-family: "Open-Sans";
 }
+
 h1,
 h2,
 h3,
 h4,
 h6,
 h6 {
-  font-family: Neucha;
+  font-family: "Neucha";
   line-height: 1.2em;
   margin: 0;
 }
@@ -55,33 +56,48 @@ h3 {
   width: 1110px;
   margin: 0 auto;
   padding: 100px 0;
-  position: relative; /* Позиционирование для текста */
-  z-index: 1;
 }
 
-.background-container {
+.header {
   position: relative;
+
   overflow: hidden;
 }
 
-.background-container::before {
+span {
+  color: var(--main);
+}
+
+.section-bg::before {
+  width: 1440px;
+  height: 914px;
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("/src/images/background.png"); /* Замените на путь к вашей картинке */
-  background-size: cover; /* Обтягивает картинку, чтобы она заполнила контейнер */
+  background-image: url(/src/images/background.png);
   background-repeat: no-repeat;
-  opacity: 0.1; /* Прозрачность 90% (1 - 0.9) */
-  z-index: 0; /* Позволяет фону оставаться за текстом */
+  background-size: cover;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+  z-index: 0;
 }
+
 .header-hero {
   position: relative;
 }
 
-.header {
+.header-hero h1 {
+  z-index: 2;
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.hro-desc {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
 }
 
 .header-main {
@@ -89,20 +105,25 @@ h3 {
   height: 525px;
   top: -55px;
   right: -270px;
-  z-index: -1;
+  z-index: 0;
 }
 
-span {
-  color: #fe8a02;
+.hro-desc-left {
+  width: 540px;
 }
 
-.hro-desc {
-  margin-top: 180px;
-  display: flex;
-  column-gap: 30px;
+.hro-desc-rigth {
+  width: 540px;
 }
 
 .hro-link {
+  text-align: center;
+  width: 148px;
+  margin-top: 40px;
+  text-decoration: none;
   padding: 12px 24px;
+  background: var(--main);
   font-weight: bold;
+  color: var(--white);
+  display: block;
 }
