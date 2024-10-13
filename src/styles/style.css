@@ -69,15 +69,14 @@ h3 {
 }
 
 .wrapper {
-  width: 100%;
+  width: 1440px;
   margin: 0 auto;
+  background: var(--light);
 }
 
 .header {
   position: relative;
-  background: var(--light);
-  overflow: hidden;
-  width: 100%;
+
   margin: 0 auto;
 }
 
@@ -92,9 +91,10 @@ span {
   position: absolute;
   background-image: url(/src/images/background.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   left: 50%;
+
   transform: translateX(-50%);
   opacity: 6%;
   z-index: 0;
@@ -218,4 +218,47 @@ span {
   padding-bottom: 40px;
   font-family: "Neucha";
   line-height: 1;
+}
+
+.section-bg {
+  height: 905px;
+}
+
+.ikea-column {
+  columns: 2;
+  gap: 30px;
+  display: flex;
+}
+
+.p-ikea {
+  background: var(--brown);
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: var(--white);
+  padding-left: 10px;
+}
+
+.ikea-img {
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.desc-column {
+  columns: 2;
+  gap: 30px;
+}
+
+.h3-ikea {
+  color: var(--translucent-dark);
+}
+
+.ikea-text h3 {
+  margin-top: 30px;
+}
+
+.ikea-im {
+  vertical-align: middle;
+}
+
+.h4-ikea {
+  color: var(--translucent-dark);
 }
