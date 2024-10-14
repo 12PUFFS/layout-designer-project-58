@@ -48,6 +48,8 @@ h6 {
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -69,7 +71,7 @@ h3 {
 }
 
 .wrapper {
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
   background: var(--light);
 }
@@ -86,7 +88,7 @@ span {
 
 .section-bg::before {
   width: 1440px;
-  height: 960px;
+  height: 916px;
   content: "";
   position: absolute;
   background-image: url("/src/images/background.png");
@@ -234,6 +236,8 @@ span {
   margin-bottom: 20px;
   color: var(--white);
   padding-left: 10px;
+  z-index: 2;
+  position: relative;
 }
 
 .ikea-img {
