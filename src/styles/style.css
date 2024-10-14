@@ -122,7 +122,7 @@ span {
   position: absolute;
   height: 525px;
   top: -55px;
-  right: -270px;
+  right: -260px;
   z-index: 0;
 }
 
@@ -285,4 +285,53 @@ span {
 
 .premature-optimization {
   color: white;
+}
+
+.config {
+  background: #42413c;
+  height: 190px;
+  padding: 50px;
+  align-items: center;
+  display: flex;
+
+  margin-bottom: 60px;
+}
+
+.input {
+  height: 50px;
+  width: 420px;
+  position: relative;
+  display: flex;
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.input-send {
+  width: 70px;
+  height: 50px;
+  background: var(--main);
+  position: relative;
+}
+
+.input-send::before {
+  content: "";
+  position: absolute;
+  background-image: url(/src/images/send.svg);
+  width: 24px;
+  height: 24px;
+  transform: translate(50%, 50%);
+}
+
+.config-text {
+  color: var(--white);
+  margin-right: 122px;
+}
+
+.accept,
+.y,
+.u {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
